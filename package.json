@@ -8,7 +8,8 @@
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config webpack.config.js",
-    "build": "rm -vrf docs/* && cross-env NODE_ENV=production webpack --config webpack.config.js"
+    "build": "rm -vrf docs/* && cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "commit": "yarn build && git add ."
   },
   "devDependencies": {
     "autoprefixer": "^9.0.1",
