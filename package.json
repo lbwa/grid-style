@@ -1,0 +1,26 @@
+{
+  "name": "flexbox-grid",
+  "version": "0.1.0",
+  "description": "Grid layout implemented by flex box.",
+  "main": "index.js",
+  "author": "Bowen <mr_lbw@outlook.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --progress --config webpack.config.js",
+    "build": "rm -vrf docs/* && cross-env NODE_ENV=production webpack --config webpack.config.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.0.1",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.9.2",
+    "postcss-loader": "^2.1.6",
+    "sass-loader": "^7.0.3",
+    "style-loader": "^0.21.0",
+    "webpack": "^4.16.3",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  }
+}
