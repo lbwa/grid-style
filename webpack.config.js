@@ -1,5 +1,8 @@
 const join = require('path').join
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
+const devMode = process.env.NODE_ENV === 'development'
 
 function resolve (dir) {
   return join(__dirname, dir)
@@ -25,7 +28,7 @@ module.exports = {
         test: /.sass$/,
         include: [resolve('assets')],
         use: [
-          'style-loader',
+          devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
           {
             loader: 'postcss-loader',
@@ -47,6 +50,11 @@ module.exports = {
       filename: 'index.html',
       template: './src/index.html',
       inject: true
+    }),
+
+    new MiniCssExtractPlugin({
+      filename: devMode ? '[name].css' : '[name].[contenthash:8].css',
+      chunkFilename: devMode ? '[id].css' : '[id].[contenthash:8].css'
     })
   ]
 }
