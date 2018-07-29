@@ -5,8 +5,6 @@ function resolve (dir) {
   return join(__dirname, dir)
 }
 
-const isDev = process.env.NODE_ENV === 'development'
-
 module.exports = {
   mode: process.env.NODE_ENV,
   
@@ -18,7 +16,7 @@ module.exports = {
 
   output: {
     filename: 'app.js',
-    path: isDev ? resolve('dist') : resolve('docs')
+    path: resolve('docs')
   },
 
   module: {
