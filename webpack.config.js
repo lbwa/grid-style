@@ -10,7 +10,7 @@ function resolve (dir) {
 
 module.exports = {
   mode: process.env.NODE_ENV,
-  
+
   target: 'web',
 
   context: resolve('./'),
@@ -43,6 +43,19 @@ module.exports = {
         ]
       }
     ]
+  },
+
+  devtool: devMode ? 'cheap-module-eval-source-map' : '',
+
+  devServer: {
+    host: '0.0.0.0',
+
+    port: '8080',
+
+    overlay: {
+      warning: false,
+      errors: true
+    }
   },
 
   plugins: [
