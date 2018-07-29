@@ -3,18 +3,26 @@ html, body
   height: 100%
 
 *, *:before, *:after
-  box-sizing: border-box // 影响 自定义宽度 时的 1/2 宽度
+  box-sizing: border-box // 影响 自定义宽度章节 时的 1/2 宽度
   margin: 0
 
 .main-title
   text-align: center
 
 .title
-  margin: 1rem 0
+  // margin-top 会撑开 body，将 body 与 html 形成空隙
+  padding: 1rem 0
+
+.section
+  padding: 20px
+  margin-bottom: 30px
+  border-radius: 5px
+  box-shadow: 0 1px 3px 1px rgba(60, 64, 67, .2), 0 2px 8px 4px rgba(60, 64, 67, .1)
 
 .app
   margin: 0 auto
   max-width: 980px
+  padding: 0 10px
 
 .bg
   padding: 10px 0
@@ -22,11 +30,19 @@ html, body
   color: white
   text-align: center
   background-color: #1867c0
-  
+
 .mb--10
   margin-bottom: 10px
-  
+
+
+// grid 布局中自定义宽度的实现原理，以 flex-basis 在未指定 flex-grow 的情况下来定义宽度
 .user-1of2
-  width: 50%
-  flex: none
-  // equal to flex: 0 0 50%, key is flex-grow: 0 and flex-basis: 50%
+  flex-grow: 0
+  flex-basis: 50%
+  max-width: 50% // ! 防止内容撑开容器，必须设置
+  // equal to width: 50%, flex: none
+
+.user-1of3
+  flex-grow: 0
+  flex-basis: 33.3333%
+  max-width: 33.3333%

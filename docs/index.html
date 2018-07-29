@@ -5,58 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Grid layout by flexbox</title>
-<link href="main.1e422498.css" rel="stylesheet"></head>
+<link href="main.d315f16f.css" rel="stylesheet"></head>
 <body>
   <h1 class="main-title title">Grid 布局</h1>
   <div class="app">
-    <section class="basic-layout">
+    <section class="basic-layout section">
       <h3 class="title">基本布局</h3>
-      <div class="grid grid--gutters">
-        <div class="grid-cell mb--10">
+
+      <div class="grid grid--gutters mb--10">
+        <div class="grid-cell">
           <div class="bg">1/2</div>
-        </div> 
-        <div class="grid-cell mb--10">
+        </div>
+        <div class="grid-cell">
           <div class="bg">1/2</div>
         </div>
       </div>
-      <div class="grid grid--gutters">
-        <div class="grid-cell mb--10">
-          <div class="bg">1/3</div>
-        </div> 
-        <div class="grid-cell mb--10">
+
+      <div class="grid grid--gutters mb--10">
+        <div class="grid-cell">
           <div class="bg">1/3</div>
         </div>
-        <div class="grid-cell mb--10">
+        <div class="grid-cell">
+          <div class="bg">1/3</div>
+        </div>
+        <div class="grid-cell">
           <div class="bg">1/3</div>
         </div>
       </div>
-      <div class="grid grid--gutters">
-        <div class="grid-cell mb--10">
-          <div class="bg">1/4</div>
-        </div> 
-        <div class="grid-cell mb--10">
+
+      <div class="grid grid--gutters mb--10">
+        <div class="grid-cell">
           <div class="bg">1/4</div>
         </div>
-        <div class="grid-cell mb--10">
+        <div class="grid-cell">
           <div class="bg">1/4</div>
         </div>
-        <div class="grid-cell mb--10">
+        <div class="grid-cell">
+          <div class="bg">1/4</div>
+        </div>
+        <div class="grid-cell">
           <div class="bg">1/4</div>
         </div>
       </div>
     </section>
-    
-    <section class="individual-sizing">
+
+    <section class="individual-sizing section">
       <h3 class="title">自定义宽度</h3>
-      <div class="grid grid--gutters">
+
+      <div class="grid grid--gutters mb--10">
         <div class="grid-cell user-1of2">
           <div class="bg">1/2</div>
-        </div> 
-        <div class="grid-cell mb--10">
+        </div>
+        <div class="grid-cell">
           <div class="bg">auto</div>
         </div>
-        <div class="grid-cell mb--10">
+        <div class="grid-cell">
           <div class="bg">auto</div>
+        </div>
+      </div>
+      
+      <div class="grid grid--gutters mb--10">
+        <div class="grid-cell">
+          <div class="bg">auto</div>
+        </div>
+        <div class="grid-cell user-1of3">
+          <div class="bg">1/3</div>
         </div>
       </div>
     </section>

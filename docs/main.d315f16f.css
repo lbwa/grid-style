@@ -8,32 +8,8 @@
       -ms-flex: 1;
           flex: 1; }
 
-.grid--gutters {
-  margin: -1em 0 0 -1em; }
-  .grid--gutters > .grid-cell {
-    padding: 1em 0 0 1em; }
-
-.grid--top {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start; }
-
-.grid--bottom {
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end; }
-
-.grid-cell--top {
-  -ms-flex-item-align: start;
-      align-self: flex-start; }
-
-.grid-cell--bottom {
-  -ms-flex-item-align: end;
-      align-self: flex-end; }
-
-.grid-cell--center {
-  -ms-flex-item-align: center;
-      align-self: center; }
+.grid--gutters > .grid-cell {
+  padding: 0 .5em; }
 
 .grid--fit > .grid-cell {
   -webkit-box-flex: 1;
@@ -102,6 +78,28 @@
         -ms-flex: 0 0 25%;
             flex: 0 0 25%; } }
 
+.grid--top {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+
+.grid--bottom {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end; }
+
+.grid-cell--top {
+  -ms-flex-item-align: start;
+      align-self: flex-start; }
+
+.grid-cell--bottom {
+  -ms-flex-item-align: end;
+      align-self: flex-end; }
+
+.grid-cell--center {
+  -ms-flex-item-align: center;
+      align-self: center; }
+
 html, body {
   margin: 0;
   height: 100%; }
@@ -115,11 +113,19 @@ html, body {
   text-align: center; }
 
 .title {
-  margin: 1rem 0; }
+  padding: 1rem 0; }
+
+.section {
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1);
+          box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1); }
 
 .app {
   margin: 0 auto;
-  max-width: 980px; }
+  max-width: 980px;
+  padding: 0 10px; }
 
 .bg {
   padding: 10px 0;
@@ -132,8 +138,18 @@ html, body {
   margin-bottom: 10px; }
 
 .user-1of2 {
-  width: 50%;
   -webkit-box-flex: 0;
-      -ms-flex: none;
-          flex: none; }
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  max-width: 50%; }
+
+.user-1of3 {
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-preferred-size: 33.3333%;
+      flex-basis: 33.3333%;
+  max-width: 33.3333%; }
 

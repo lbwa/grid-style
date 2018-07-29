@@ -1,55 +1,24 @@
-// basic grid styles
-.grid
-  display: flex
-  
-.grid-cell
-  flex: 1
-  
-// with gutters
-.grid--gutters
-  margin: -1em 0 0 -1em // 激活即排除左内边距对布局的影响，但会导致元素重叠
-
-  & > .grid-cell
-    padding: 1em 0 0 1em
-
-// alignment per row
-.grid--top
-  align-items: flex-start
-
-.grid--bottom
-  align-items: flex-end
-  
-// alignment per cell
-.grid-cell--top
-  align-self: flex-start
- 
-.grid-cell--bottom
-  align-self: flex-end
-  
-.grid-cell--center
-  align-self: center
-
 // responsive modifiers
 .grid--fit > .grid-cell
   flex: 1
-  
+
 .grid--full > .grid-cell
   flex: 0 0 100%
-  
+
 .grid--2 > .grid-cell
   flex: 0 0 50%
-    
+
 .grid--3 > .grid-cell
   flex: 0 0 33.3333%
-  
+
 .grid--4 > .grid-cell
   flex: 0 0 25%
-  
+
 // small to medium screens
 @media (min-width: 24em)
   .small-grid--fit > .grid-cell
   flex: 1
-  
+
   .samll-grid--full > .grid-cell
     flex: 0 0 100%
 
@@ -61,12 +30,12 @@
 
   .samll-grid--4 > .grid-cell
     flex: 0 0 25%
- 
+
 // large screens
 @media (min-width: 48em)
   .large-grid--fit > .grid-cell
   flex: 1
-  
+
   .large-grid--full > .grid-cell
     flex: 0 0 100%
 
