@@ -67,7 +67,7 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: releaseMode ? 'grid-style.css' : '[name].[contenthash:8].css',
+      filename: releaseMode ? 'index.css' : '[name].[contenthash:8].css',
       chunkFilename: devMode ? '[id].css' : '[id].[contenthash:8].css'
     })
   ]
