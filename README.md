@@ -18,9 +18,10 @@ yarn add grid-style
 
 ```html
 <!-- CDN-->
-<script type="text/javascript" src="https://unpkg.com/grid-style"></script>
+<link rel="stylesheet" href="https://unpkg.com/grid-style@latest/dist/index.min.css">
 <!-- or -->
-<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/grid-style"></script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/grid-style@latest/dist/index.min.css">
 <!-- recommend you to add version number to url ending. eg.https://unpkg.com/grid-style@x.y.z --> 
 ```
 
@@ -28,7 +29,9 @@ yarn add grid-style
 
 ```js
 // import css file to js file
-import 'grid-style'
+import 'grid-style/dist/index.min.css'
+// or
+import 'grid-style/dist/index.css'
 
 // a sass alternative to css file
 import 'grid-style/layout/index.sass'
