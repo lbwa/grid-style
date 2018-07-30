@@ -9,20 +9,29 @@
 .grid {
   display: -webkit-box;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
 
 .grid-cell {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1; }
 
-.grid--gutters > .grid-cell {
-  padding: 0 .5em; }
+.grid[grid-gutters="1"] > .grid-cell {
+  padding: 0 0.5em; }
 
 .grid--fit > .grid-cell {
   -webkit-box-flex: 1;
       -ms-flex: 1;
-          flex: 1; }
+          flex: 1;
+  /*
+    默认值
+    flex-grow: 0
+    flex-shrink: 1
+    flex-basis: auto
+    flex-basis 优先级高于 flex-grow，但尺寸不会小于 flex-grow (在非 0 的情况下)且不大于父容器
+   */ }
 
 .grid--full > .grid-cell {
   -webkit-box-flex: 0;
@@ -56,11 +65,12 @@
       flex-basis: 25%;
   max-width: 25%; }
 
-@media (min-width: 24em) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  .samll-grid--full > .grid-cell {
+@media (min-width: 576px) {
+  .small-grid--fit > .grid-cell {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
+  .small-grid--full > .grid-cell {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -81,7 +91,7 @@
     -ms-flex-preferred-size: 33.3333%;
         flex-basis: 33.3333%;
     max-width: 33.3333%; }
-  .samll-grid--4 > .grid-cell {
+  .small-grid--4 > .grid-cell {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
             flex-grow: 0;
@@ -89,10 +99,11 @@
         flex-basis: 25%;
     max-width: 25%; } }
 
-@media (min-width: 48em) {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+@media (min-width: 768px) {
+  .large-grid--fit > .grid-cell {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
   .large-grid--full > .grid-cell {
     -webkit-box-flex: 0;
         -ms-flex-positive: 0;
@@ -165,6 +176,12 @@ html, body {
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1);
           box-shadow: 0 1px 3px 1px rgba(60, 64, 67, 0.2), 0 2px 8px 4px rgba(60, 64, 67, 0.1); }
+
+.tips {
+  display: block;
+  padding-bottom: 10px;
+  font-size: .9rem;
+  color: rgba(0, 0, 0, 0.5); }
 
 .app {
   margin: 0 auto;

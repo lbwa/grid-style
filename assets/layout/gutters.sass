@@ -1,10 +1,13 @@
 // 在 vue.js, reactjs 中推荐以 props 的形式设置 padding 来实现间隙
-// 即应以 props 的形式设置 grid--gutters 样式
-.grid--gutters
+// 即应以 props 的形式设置 grid-gutters 样式
+
+$base-gutter: .5em
+
+.grid[grid-gutters="1"]
   // margin: -1em 0 0 -1em // 激活即排除左内边距对布局的影响，但会导致元素重叠
 
   & > .grid-cell
-    padding: 0 .5em
+    padding: 0 $base-gutter *  1
 
 // inspired by ant-design and Element-UI
 // https://ant.design/components/grid-cn/#components-grid-demo-gutter
