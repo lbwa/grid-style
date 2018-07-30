@@ -2,6 +2,14 @@
 
 set -e
 
+yarn clean
+
+yarn build:sass
+
+yarn build:autoprefixer
+
+yarn mini
+
 echo "Select a option to release (input a serial number)："
 echo
 
