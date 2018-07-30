@@ -3,13 +3,14 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 const devMode = process.env.NODE_ENV === 'development'
+const releaseMode = process.env.NODE_ENV === 'release'
 
 function resolve (dir) {
   return join(__dirname, dir)
 }
 
 module.exports = {
-  mode: process.env.NODE_ENV,
+  mode: process.env.NODE_ENV === 'release' ? 'production' : process.env.NODE_ENV,
 
   target: 'web',
 
@@ -19,7 +20,7 @@ module.exports = {
 
   output: {
     filename: 'app.js',
-    path: resolve('docs')
+    path: releaseMode ? resolve('dist') : resolve('docs')
   },
 
   module: {
@@ -66,7 +67,7 @@ module.exports = {
     }),
 
     new MiniCssExtractPlugin({
-      filename: devMode ? '[name].css' : '[name].[contenthash:8].css',
+      filename: releaseMode ? 'grid-style.css' : '[name].[contenthash:8].css',
       chunkFilename: devMode ? '[id].css' : '[id].[contenthash:8].css'
     })
   ]

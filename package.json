@@ -1,14 +1,21 @@
 {
-  "name": "flexbox-grid",
-  "version": "0.1.0",
+  "name": "grid-style",
+  "version": "0.0.9",
   "description": "Grid layout implemented by flex box.",
-  "main": "index.js",
+  "main": "dist/index.css",
+  "style": "",
+  "files": [
+    "dist/grid-style.css",
+    "layout"
+  ],
   "author": "Bowen <mr_lbw@outlook.com>",
   "license": "MIT",
   "private": true,
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --progress --config webpack.config.js",
     "build": "rm -vrf docs/* && cross-env NODE_ENV=production webpack --config webpack.config.js",
+    "build:release": "rm -vrf dist/* && cross-env NODE_ENV=release webpack --config webpack.config.js",
+    "release": "yarn build:release && sh scripts/release.sh",
     "commit": "yarn build && git add ."
   },
   "devDependencies": {
@@ -24,5 +31,25 @@
     "webpack": "^4.16.3",
     "webpack-cli": "^3.1.0",
     "webpack-dev-server": "^3.1.5"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lbwa/grid-style.git"
+  },
+  "bugs": {
+    "url": "https://github.com/lbwa/grid-style/issues"
+  },
+  "homepage": "https://github.com/lbwa/grid-style#readme",
+  "keywords": [
+    "css",
+    "sass",
+    "mobile-first",
+    "responsive",
+    "front-end",
+    "flex-box",
+    "flex",
+    "grid",
+    "grid-layout",
+    "web"
+  ]
 }
