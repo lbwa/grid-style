@@ -164,6 +164,10 @@ html, body {
   margin: 0;
   height: 100%; }
 
+@media (min-width: 576px) {
+  html {
+    font-size: 14px; } }
+
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -214,6 +218,10 @@ html, body {
   height: 150px; }
   .hight-1.lh-normal {
     line-height: 130px; }
+
+.no-wrap {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
 
 .user-1of2 {
   -webkit-box-flex: 0;

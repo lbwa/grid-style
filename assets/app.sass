@@ -2,6 +2,10 @@ html, body
   margin: 0
   height: 100%
 
+@media (min-width: 576px)
+  html
+    font-size: 14px
+
 *, *:before, *:after
   box-sizing: border-box // 影响 自定义宽度章节 时的 1/2 宽度
   margin: 0
@@ -54,6 +58,9 @@ html, body
 
   &.lh-normal
     line-height: 130px // 100px - contanier padding
+
+.no-wrap
+  flex-wrap: nowrap
 
 // grid 布局中自定义宽度的实现原理，以 flex-basis 在未指定 flex-grow 的情况下来定义宽度
 .user-1of2

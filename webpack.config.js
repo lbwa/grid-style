@@ -26,7 +26,7 @@ module.exports = {
     rules: [
       {
         test: /.sass$/,
-        include: [resolve('assets')],
+        include: [resolve('layout'), resolve('assets')],
         use: [
           devMode ? 'style-loader' : MiniCssExtractPlugin.loader,
           'css-loader',
