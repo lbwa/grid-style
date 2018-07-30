@@ -21,6 +21,7 @@ yarn add grid-style
 <script type="text/javascript" src="https://unpkg.com/grid-style"></script>
 <!-- or -->
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/grid-style"></script>
+<!-- recommend you to add version number to url ending. eg.https://unpkg.com/grid-style@x.y.z --> 
 ```
 
 ## Usage
@@ -58,12 +59,12 @@ import 'grid-style/layout/index.sass'
 
 | Selector | description |
 | ---------- | ----------- |
-| `.grid-top` | define alignment per row to top-aligned |
-| `.grid-center` | define alignment per row to vertically-centered |
-| `.grid-bottom` | define alignment per row to bottom-aligned |
-| `.grid-cell-top` | define alignment per item to top-aligned |
-| `.grid-cell-center` | define alignment per item to vertically-centered |
-| `.grid-cell-bottom` | define alignment per item to bottom-aligned |
+| `.grid-top` | define alignment per ***row*** to top-aligned |
+| `.grid-center` | define alignment per ***row*** to vertically-centered |
+| `.grid-bottom` | define alignment per ***row*** to bottom-aligned |
+| `.grid-cell-top` | define alignment per ***item*** to top-aligned |
+| `.grid-cell-center` | define alignment per ***item*** to vertically-centered |
+| `.grid-cell-bottom` | define alignment per ***item*** to bottom-aligned |
 
 ## gutters
 
@@ -84,5 +85,5 @@ import 'grid-style/layout/index.sass'
 | Selector | description |
 | ---------- | ----------- |
 | `.grid-full ~ 2, 3, 4 > .grid-cell` | define all flex item width from same flex container |
-| `.small-grid-fit, full, 2, 3, 4 > .grid-cell` | same as `.grid-full ~ 2, 3, 4 > .grid-cell`, but it only works on device which width under `576px ~ 768px` |
+| `.small-grid-fit, full, 2, 3, 4 > .grid-cell` | same as `.grid-full ~ 2, 3, 4 > .grid-cell`, but it only works on device which width over `576px` |
 | `.large-grid-fit, full, 2, 3, 4 > .grid-cell` | same as `.grid-full ~ 2, 3, 4 > .grid-cell`, but it only works on device which width over `768px` |

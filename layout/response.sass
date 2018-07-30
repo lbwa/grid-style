@@ -2,9 +2,11 @@
 
 // responsive modifiers
 // 在媒体查询失效时，将应用以下样式，那么即可达到响应式布局目的
-// 如 grid--full 与本模块中任意媒体查询搭配时，将在媒体查询失效时应用 grid--full 样式
+// 如 grid-full 与本模块中任意媒体查询搭配时，将在媒体查询失效时应用 grid-full 样式
 // 那么 结合容器的 flex-wrap: wrap 将达到每个 flex item 独占一行的效果
-.grid--fit > .grid-cell
+
+// all flex item
+.grid-fit > .grid-cell
   flex: 1 // 即 flex: 1 1 auto
   /*
     默认值
@@ -14,74 +16,72 @@
     flex-basis 优先级高于 flex-grow，但尺寸不会小于 flex-grow (在非 0 的情况下)且不大于父容器
    */
 
-.grid--full > .grid-cell
+.grid-full > .grid-cell
   flex-grow: 0
   flex-basis: 100%
   max-width: 100%
 
-.grid--2 > .grid-cell
+.grid-2 > .grid-cell
   flex-grow: 0
   flex-basis: 50%
   max-width: 50%
 
-.grid--3 > .grid-cell
+.grid-3 > .grid-cell
   flex-grow: 0
   flex-basis: 33.3333%
   max-width: 33.3333%
 
-.grid--4 > .grid-cell
+.grid-4 > .grid-cell
   flex-grow: 0
   flex-basis: 25%
   max-width: 25%
 
-// small to medium screens
+// small to medium screens(all flex item)
 @media (min-width: 576px)
-  .small-grid--fit > .grid-cell
+  .small-grid-fit > .grid-cell
     flex: 1
 
-  .small-grid--full > .grid-cell
+  .small-grid-full > .grid-cell
     flex-grow: 0
     flex-basis: 100%
     max-width: 100% // 防止子元素内容撑开容器
 
-  .small-grid--2 > .grid-cell
+  .small-grid-2 > .grid-cell
     flex-grow: 0
     flex-basis: 50%
     max-width: 50%
 
-  .small-grid--3 > .grid-cell
+  .small-grid-3 > .grid-cell
     flex-grow: 0
     flex-basis: 33.3333%
     max-width: 33.3333%
 
-  .small-grid--4 > .grid-cell
+  .small-grid-4 > .grid-cell
     flex-grow: 0
     flex-basis: 25%
     max-width: 25%
 
-// large screens
+// large screens(all flex item)
 @media (min-width: 768px)
-  .large-grid--fit > .grid-cell
+  .large-grid-fit > .grid-cell
     flex: 1
 
-  .large-grid--full > .grid-cell
+  .large-grid-full > .grid-cell
     flex-grow: 0
     flex-basis: 100%
     max-width: 100%
 
-  .large-grid--2 > .grid-cell
+  .large-grid-2 > .grid-cell
     flex-grow: 0
     flex-basis: 50%
     max-width: 50%
 
-  .large-grid--3 > .grid-cell
+  .large-grid-3 > .grid-cell
     flex-grow: 0
     flex-basis: 33.3333%
     max-width: 33.3333%
 
-  .large-grid--4 > .grid-cell
+  .large-grid-4 > .grid-cell
     flex-grow: 0
     flex-basis: 25%
     max-width: 25%
-
-// inspired by vuetify.js
