@@ -49,14 +49,16 @@ import 'grid-style/layout/index.sass'
 
 ## Basis
 
-| Selector | description |
-| ---------- | ----------- |
-| `.gird` | flex box container |
-| `.grid.no-wrap` | disallowed wrap flex item |
-| `.gird.col` | column direction |
-| `.gird.row` | row direction |
-| `.gird-cell` | define default flex grow factor value of a flex item |
-| `.grid.grid-cell-1 ~ 12` | define single flex item width （based on `1/12 container width`） |
+| Selector | target | description |
+| -------- | ------ | ----------- |
+| `.gird` | `flex container` | define flex box container |
+| `.grid.no-wrap` | `flex container` | disallow wrap flex item |
+| `.gird.col` | `flex container` | set flex direction to column |
+| `.gird.cr` | `flex container` | set flex direction to column-reverse |
+| `.gird.row` | `flex container` | set flex direction to row |
+| `.gird.rr` | `flex container` | set flex direction to row-reverse |
+| `.gird-cell` | `flex item` | define default flex grow factor value of a flex item |
+| `.grid-cell-1 ~ .grid-cell-12` | `flex item` | define single flex item width （based on `1/12 container width`） |
 
 ```html
 <div class="grid">
@@ -71,14 +73,14 @@ import 'grid-style/layout/index.sass'
 
 ## alignment
 
-| Selector | description |
-| ---------- | ----------- |
-| `.grid-top` | define alignment per ***row*** to top-aligned |
-| `.grid-center` | define alignment per ***row*** to vertically-centered |
-| `.grid-bottom` | define alignment per ***row*** to bottom-aligned |
-| `.grid-cell-top` | define alignment per ***item*** to top-aligned |
-| `.grid-cell-center` | define alignment per ***item*** to vertically-centered |
-| `.grid-cell-bottom` | define alignment per ***item*** to bottom-aligned |
+| Selector | target | description |
+| -------- | ------ | ----------- |
+| `.grid-top` | `flex container` | define alignment per ***row*** to top-aligned |
+| `.grid-center` | `flex container` | define alignment per ***row*** to vertically-centered |
+| `.grid-bottom` | `flex container` | define alignment per ***row*** to bottom-aligned |
+| `.grid-cell-top` | `flex item` | define alignment per ***item*** to top-aligned |
+| `.grid-cell-center` | `flex item` | define alignment per ***item*** to vertically-centered |
+| `.grid-cell-bottom` | `flex item` | define alignment per ***item*** to bottom-aligned |
 
 [Online alignment demo][demo-alignment]
 
@@ -98,15 +100,15 @@ import 'grid-style/layout/index.sass'
 
 ## gutters
 
-| Selector | description |
-| ---------- | ----------- |
-| `.grid[grid-gutters="1 ~ 5"]` | define flex item gutter （based on `.5em`） |
+| Selector | target | description |
+| -------- | ------ | ----------- |
+| `.grid[grid-gutters="1"] ~ .grid[grid-gutters="5"]` | `flex container` | define flex item gutter （based on `.5em`） |
 
 ## offset
 
-| Selector | description |
-| ---------- | ----------- |
-| `.grid.offset-'1 ~ 12'` | define flex item offset （based on `1/12 container width`）|
+| Selector | target | description |
+| -------- | ------ | ----------- |
+| `.offset-1 ~ .offset-12` | `flex item` | define flex item offset （based on `1/12 container width`）|
 
 [Online offset demo][demo-offset]
 
@@ -129,12 +131,23 @@ import 'grid-style/layout/index.sass'
 
 [demo-offset]:https://jsfiddle.net/h946ot70/36/
 
-## responsive
+## response
 
 ***Notice***: This section define properties to ***all*** flex item （`.grid-cell` * n） from ***one*** flex container（`.grid` * 1）.
 
-| Selector | description |
-| ---------- | ----------- |
-| `.grid-full ~ 2, 3, 4 > .grid-cell` | define all flex item width from same flex container |
-| `.small-grid-fit, full, 2, 3, 4 > .grid-cell` | same as `.grid-full ~ 2, 3, 4 > .grid-cell`, but it only works on device which width over `576px` |
-| `.large-grid-fit, full, 2, 3, 4 > .grid-cell` | same as `.grid-full ~ 2, 3, 4 > .grid-cell`, but it only works on device which width over `768px` |
+| Selector | target | description |
+| -------- | ------ | ----------- |
+| `.grid-full` | `flex container` | define all flex item `(100% container width)` width from same flex container |
+| `.grid-2` | `flex container` | define all flex item `(50% container width)` width from same flex container |
+| `.grid-3` | `flex container` | define all flex item `(33.3333% container width)` width from same flex container |
+| `.grid-4` | `flex container` | define all flex item `(25% container width)` width from same flex container |
+| `.small-grid-fit` | `flex container` | define `flex: 1` ,  but it only works on device which width over `576px` |
+| `.small-grid-full` | `flex container` | same as `.grid-full` , but it only works on device which width over `576px` |
+| `.small-grid-2` | `flex container` | same as `.grid-2` , but it only works on device which width over `576px` |
+| `.small-grid-3` | `flex container` | same as `.grid-3` , but it only works on device which width over `576px` |
+| `.small-grid-4` | `flex container` | same as `.grid-4` , but it only works on device which width over `576px` |
+| `.large-grid-fit` | `flex container` | define `flex: 1`,  it only works on device which width over `768px` |
+| `.large-grid-full` | `flex container` | same as `.grid-full` , but it only works on device which width over `768px` |
+| `.large-grid-2` | `flex container` | same as `.grid-2` , but it only works on device which width over `768px` |
+| `.large-grid-3` | `flex container` | same as `.grid-3` , but it only works on device which width over `768px` |
+| `.large-grid-4` | `flex container` | same as `.grid-4` , but it only works on device which width over `768px` |
