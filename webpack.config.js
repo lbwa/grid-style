@@ -15,7 +15,7 @@ module.exports = {
 
   context: resolve('./'),
 
-  entry: resolve('src/index.js'),
+  entry: resolve('docs/index.js'),
 
   output: {
     filename: 'app.js',
@@ -61,7 +61,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: './src/index.html',
+      template: './docs/index.html',
       inject: true
     }),
 
