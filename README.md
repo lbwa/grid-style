@@ -58,6 +58,17 @@ import 'grid-style/layout/index.sass'
 | `.gird-cell` | define default flex grow factor value of a flex item |
 | `.grid.grid-cell-1 ~ 12` | define single flex item width （based on `1/12 container width`） |
 
+```html
+<div class="grid">
+  <div class="grid-cell grid-cell-2">
+    <!-- something you like -->
+  </div>
+  <div class="grid-cell">
+    <!-- something you like -->
+  </div>
+</div>
+```
+
 ## alignment
 
 | Selector | description |
@@ -68,6 +79,22 @@ import 'grid-style/layout/index.sass'
 | `.grid-cell-top` | define alignment per ***item*** to top-aligned |
 | `.grid-cell-center` | define alignment per ***item*** to vertically-centered |
 | `.grid-cell-bottom` | define alignment per ***item*** to bottom-aligned |
+
+[Online alignment demo][demo-alignment]
+
+```html
+<div class="grid grid-bottom">
+   <!-- all child flex item element will be bottom-aligned excluding gird-cell alignment element -->
+  <div class="grid-cell">
+    <!-- content of this area will be bottom-aligned -->
+  </div>
+  <div class="grid-cell grid-cell-center">
+    <!-- content of this area will be vertically-centered because of grid-cell-center -->
+  </div>
+</div>
+```
+
+[demo-alignment]:https://jsfiddle.net/h946ot70/12/
 
 ## gutters
 
@@ -80,6 +107,27 @@ import 'grid-style/layout/index.sass'
 | Selector | description |
 | ---------- | ----------- |
 | `.grid.offset-'1 ~ 12'` | define flex item offset （based on `1/12 container width`）|
+
+[Online offset demo][demo-offset]
+
+```html
+<div class="grid" grid-gutters="1">
+  <div class="grid-cell offset-1">
+    <!-- offset 8.33333% * 1 -->
+  </div>
+  <div class="grid-cell offset-4">
+    <!-- offset 8.33333% * 4 -->
+  </div>
+  <div class="grid-cell offset-6">
+    <!-- offset 8.33333% * 6 -->
+  </div>
+  <div class="grid-cell">
+    <!-- no offset -->
+  </div>
+</div>
+```
+
+[demo-offset]:https://jsfiddle.net/h946ot70/32/
 
 ## responsive
 
