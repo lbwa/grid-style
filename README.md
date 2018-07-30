@@ -71,7 +71,7 @@ import 'grid-style/layout/index.sass'
 </div>
 ```
 
-## alignment
+## Alignment
 
 | Selector | target | description |
 | -------- | ------ | ----------- |
@@ -98,13 +98,13 @@ import 'grid-style/layout/index.sass'
 
 [demo-alignment]:https://jsfiddle.net/h946ot70/12/
 
-## gutters
+## Gutters
 
 | Selector | target | description |
 | -------- | ------ | ----------- |
 | `.grid[grid-gutters="1"] ~ .grid[grid-gutters="5"]` | `flex container` | define flex item gutter （based on `.5em`） |
 
-## offset
+## Offset
 
 | Selector | target | description |
 | -------- | ------ | ----------- |
@@ -131,7 +131,7 @@ import 'grid-style/layout/index.sass'
 
 [demo-offset]:https://jsfiddle.net/h946ot70/36/
 
-## response
+## Response
 
 ***Notice***: This section define properties to ***all*** flex item （`.grid-cell` * n） from ***one*** flex container（`.grid` * 1）.
 
