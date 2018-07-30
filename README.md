@@ -127,7 +127,7 @@ import 'grid-style/layout/index.sass'
 </div>
 ```
 
-[demo-offset]:https://jsfiddle.net/h946ot70/32/
+[demo-offset]:https://jsfiddle.net/h946ot70/33/
 
 ## responsive
 
