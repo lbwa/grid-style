@@ -1,3 +1,13 @@
+<a name="0.2.0"></a>
+# [0.2.0](https://github.com/lbwa/grid-style/compare/v0.1.1...v0.2.0) (2018-07-30)
+
+
+### Features
+
+* offset functionality ([4a92e56](https://github.com/lbwa/grid-style/commit/4a92e56))
+
+
+
 <a name="0.1.1"></a>
 ## [0.1.1](https://github.com/lbwa/grid-style/compare/v0.1.0...v0.1.1) (2018-07-30)
 
