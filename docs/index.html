@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Grid layout by flexbox</title>
-<link href="main.18e3935a.css" rel="stylesheet"></head>
+<link href="main.66ab2808.css" rel="stylesheet"></head>
 <body>
   <h1 class="main-title title">Grid 布局</h1>
-  <div class="app">
+  <div class="layout">
     <section class="basic-layout section">
       <h3 class="title">基本布局</h3>
+      <span class="tips">flex 容器配置 grid-gutters="1" 为基本间隙</span>
 
       <div class="grid mb--10" grid-gutters="1">
         <div class="grid-cell">
@@ -50,7 +51,8 @@
     </section>
 
     <section class="individual-sizing section">
-      <h3 class="title">自定义宽度（混合布局）</h3>
+      <h3 class="title">混合布局（自定义宽度）</h3>
+      <span class="tips">flex 元素配置 user-1of2 或 user-1of2 等样式</span>
 
       <div class="grid mb--10" grid-gutters="1">
         <div class="grid-cell user-1of2">
@@ -76,7 +78,7 @@
 
     <section class="responsive section">
       <h3 class="title">响应式布局</h3>
-      <span class="tips">当屏幕宽度小于 576 px 时将改变布局</span>
+      <span class="tips">flex 容器配置 grid--full large-grid--fit</span>
 
       <div class="grid grid--full large-grid--fit" grid-gutters="1">
         <div class="grid-cell mb--10">
@@ -97,6 +99,8 @@
           <div class="bg">auto/3</div>
         </div>
       </div>
+
+      <span class="tips">Tips: 当屏幕宽度小于 576 px 时将改变布局</span>
     </section>
 
     <section class="grid-nest section">
@@ -121,6 +125,79 @@
         </div>
         <div class="grid-cell mb--10">
           <div class="bg">second</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="alignment">
+    <section class="top-aligned section">
+      <h3 class="title">顶部对齐</h3>
+      <span class="tips">flex 容器配置 grid--top</span>
+
+      <div class="grid mb--10 grid--top" grid-gutters="1">
+        <div class="grid-cell">
+          <div class="bg">顶部对齐</div>
+        </div>
+        <div class="grid-cell">
+          <div class="bg hight-1 lh-normal">顶部对齐</div>
+        </div>
+        <div class="grid-cell">
+          <div class="bg">顶部对齐</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-aligned section">
+      <h3 class="title">底部对齐</h3>
+      <span class="tips">flex 容器配置 grid--bottom</span>
+
+      <div class="grid mb--10 grid--bottom" grid-gutters="1">
+        <div class="grid-cell">
+          <div class="bg">底部对齐</div>
+        </div>
+        <div class="grid-cell">
+          <div class="bg hight-1 lh-normal">底部对齐</div>
+        </div>
+        <div class="grid-cell">
+          <div class="bg">底部对齐</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-aligned section">
+      <h3 class="title">垂直居中</h3>
+      <span class="tips">flex 容器配置 grid--center</span>
+
+      <div class="grid mb--10 grid--center" grid-gutters="1">
+        <div class="grid-cell">
+          <div class="bg">垂直居中</div>
+        </div>
+        <div class="grid-cell">
+          <div class="bg hight-1  lh-normal">垂直居中</div>
+        </div>
+        <div class="grid-cell">
+          <div class="bg">垂直居中</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-aligned section">
+      <h3 class="title">混合垂直居中</h3>
+      <span class="tips">flex 元素配置 grid-cell--top grid-cell--center grid-cell--bottom</span>
+
+      <div class="grid mb--10" grid-gutters="1">
+        <div class="grid-cell grid-cell--top">
+          <div class="bg">顶部对齐</div>
+        </div>
+        <div class="grid-cell">
+          <div class="bg hight-1 lh-normal">参照系</div>
+        </div>
+        <div class="grid-cell grid-cell--center">
+          <div class="bg">垂直居中</div>
+        </div>
+        <div class="grid-cell grid-cell--bottom">
+          <div class="bg">底部对齐</div>
         </div>
       </div>
     </section>

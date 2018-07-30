@@ -25,10 +25,13 @@ html, body
   font-size: .9rem
   color: rgba(0, 0, 0, .5)
 
-.app
+.layout, .alignment
   margin: 0 auto
   max-width: 980px
   padding: 0 10px
+
+.alignment
+  margin-bottom: 100px
 
 .bg
   padding: 10px 0
@@ -46,6 +49,11 @@ html, body
 .mb--10
   margin-bottom: 10px
 
+.hight-1
+  height: 150px
+
+  &.lh-normal
+    line-height: 130px // 100px - contanier padding
 
 // grid 布局中自定义宽度的实现原理，以 flex-basis 在未指定 flex-grow 的情况下来定义宽度
 .user-1of2

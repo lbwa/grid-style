@@ -138,6 +138,11 @@
       -ms-flex-align: start;
           align-items: flex-start; }
 
+.grid--center {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 .grid--bottom {
   -webkit-box-align: end;
       -ms-flex-align: end;
@@ -183,10 +188,13 @@ html, body {
   font-size: .9rem;
   color: rgba(0, 0, 0, 0.5); }
 
-.app {
+.layout, .alignment {
   margin: 0 auto;
   max-width: 980px;
   padding: 0 10px; }
+
+.alignment {
+  margin-bottom: 100px; }
 
 .bg {
   padding: 10px 0;
@@ -201,6 +209,11 @@ html, body {
 
 .mb--10 {
   margin-bottom: 10px; }
+
+.hight-1 {
+  height: 150px; }
+  .hight-1.lh-normal {
+    line-height: 130px; }
 
 .user-1of2 {
   -webkit-box-flex: 0;
