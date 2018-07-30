@@ -34,8 +34,8 @@ html, body
   max-width: 980px
   padding: 0 10px
 
-.methods:nth-child(0n+1)
-  margin-bottom: 100px !important
+.offset
+  margin-bottom: 100px
 
 .bg
   padding: 10px 0
@@ -59,14 +59,27 @@ html, body
   &.lh-normal
     line-height: 130px // 100px - contanier padding
 
-// grid 布局中自定义宽度的实现原理，以 flex-basis 在未指定 flex-grow 的情况下来定义宽度
-.user-1of2
-  flex-grow: 0
-  flex-basis: 50%
-  max-width: 50% // ! 防止内容撑开容器，必须设置
-  // equal to width: 50%, flex: none
+// github-banner
 
-.user-1of3
-  flex-grow: 0
-  flex-basis: 33.3333%
-  max-width: 33.3333%
+@keyframes octocat-wave
+  0%, 100%
+    transform: rotate(0)
+
+  20%, 60%
+    transform: rotate(-25deg)
+
+  40%, 80%
+    transform: rotate(10deg)
+
+.github-corner:hover
+  .octo-arm
+    animation: octocat-wave 560ms ease-in-out
+    
+@media (max-width:500px)
+  .github-corner:hover
+    .octo-arm
+      animation: none
+      
+  .github-corner
+    .octo-arm
+      animation: octocat-wave 560ms ease-in-out
