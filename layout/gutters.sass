@@ -3,11 +3,14 @@
 
 $base-gutter: .5em
 
-.grid[grid-gutters="1"]
-  // margin: -1em 0 0 -1em // 激活即排除左内边距对布局的影响，但会导致元素重叠
+// .grid[grid-gutters="1"]
+//   margin: -1em 0 0 -1em // 激活即排除左内边距对布局的影响，但会导致元素重叠
+//   & > .grid-cell
+//     padding: 0 $base-gutter *  1
 
-  & > .grid-cell
-    padding: 0 $base-gutter *  1
+@for $i from 1 through 5
+  .grid[grid-gutters="#{$i}"] > .grid-cell
+    padding: 0 $base-gutter * 1
 
 // inspired by ant-design and Element-UI
 // https://ant.design/components/grid-cn/#components-grid-demo-gutter

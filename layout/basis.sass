@@ -1,7 +1,9 @@
 // basic grid styles
 .grid
   display: flex
-  flex-wrap: wrap // 使得 flex-grow: 0; flex-basis: 100% 生效为 flex item 独占一行
+  flex-wrap: wrap // 使得 flex-grow: 0; flex-basis: 100% 生效时 flex item 独占一行
+  &.no-wrap
+    flex-wrap: nowrap
 
 .grid-cell
   flex: 1

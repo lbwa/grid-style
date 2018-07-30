@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Grid layout by flexbox</title>
-<link href="main.12f71604.css" rel="stylesheet"></head>
+<link href="main.74fb6935.css" rel="stylesheet"></head>
 <body>
   <h1 class="main-title title">Grid 布局</h1>
-  <div class="layout">
+  <div class="layout methods">
     <section class="basic-layout section">
       <h3 class="title">基本布局</h3>
       <span class="tips">flex 容器配置 grid-gutters="1" 为基本间隙</span>
@@ -130,7 +130,7 @@
     </section>
   </div>
 
-  <div class="alignment">
+  <div class="alignment methods">
     <section class="top-aligned section">
       <h3 class="title">顶部对齐</h3>
       <span class="tips">flex 容器配置 grid--top</span>
@@ -165,7 +165,7 @@
       </div>
     </section>
 
-    <section class="bottom-aligned section">
+    <section class="vertical-aligned section">
       <h3 class="title">垂直居中</h3>
       <span class="tips">flex 容器配置 grid--center</span>
 
@@ -182,7 +182,7 @@
       </div>
     </section>
 
-    <section class="bottom-aligned section">
+    <section class="mixed-vertical-aligned section">
       <h3 class="title">混合垂直居中</h3>
       <span class="tips">flex 元素配置 grid-cell--top grid-cell--center grid-cell--bottom</span>
 
@@ -198,6 +198,39 @@
         </div>
         <div class="grid-cell grid-cell--bottom">
           <div class="bg">底部对齐</div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="offset methods">
+    <section class="offset-section section">
+      <h3 class="title">偏移</h3>
+      <span class="tips">flex 容器配置 offset-1 ~ offset-12 （8.33333% ~ 100%）</span>
+      <div class="grid grid--4 mb--10" grid-gutters="1">
+        <div class="grid-cell offset-1">
+          <div class="bg">偏移</div>
+        </div>
+        <div class="grid-cell offset-2">
+          <div class="bg">偏移</div>
+        </div>
+      </div>
+      <div class="grid mb--10" grid-gutters="1">
+        <div class="grid-cell offset-3">
+          <div class="bg">偏移</div>
+        </div>
+        <div class="grid-cell offset-4">
+          <div class="bg">偏移</div>
+        </div>
+      </div>
+      <div class="grid grid--4 mb--10" grid-gutters="1">
+        <div class="grid-cell offset-6">
+          <div class="bg">偏移</div>
+        </div>
+      </div>
+      <div class="grid grid--4 mb--10" grid-gutters="1">
+        <div class="grid-cell offset-7">
+          <div class="bg">偏移</div>
         </div>
       </div>
     </section>

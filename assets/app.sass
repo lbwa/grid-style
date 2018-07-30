@@ -29,13 +29,13 @@ html, body
   font-size: .9rem
   color: rgba(0, 0, 0, .5)
 
-.layout, .alignment
+.methods
   margin: 0 auto
   max-width: 980px
   padding: 0 10px
 
-.alignment
-  margin-bottom: 100px
+.methods:nth-child(0n+1)
+  margin-bottom: 100px !important
 
 .bg
   padding: 10px 0
@@ -58,9 +58,6 @@ html, body
 
   &.lh-normal
     line-height: 130px // 100px - contanier padding
-
-.no-wrap
-  flex-wrap: nowrap
 
 // grid 布局中自定义宽度的实现原理，以 flex-basis 在未指定 flex-grow 的情况下来定义宽度
 .user-1of2
