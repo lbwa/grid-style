@@ -193,7 +193,11 @@ html, body {
   border-radius: 5px;
   color: white;
   text-align: center;
-  background-color: #1867c0; }
+  background-color: #00a0e9; }
+  .bg.light {
+    background-color: rgba(0, 160, 233, 0.7); }
+  .bg.deep {
+    background-color: #01579b; }
 
 .mb--10 {
   margin-bottom: 10px; }

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Grid layout by flexbox</title>
-<link href="main.e888aedc.css" rel="stylesheet"></head>
+<link href="main.18e3935a.css" rel="stylesheet"></head>
 <body>
   <h1 class="main-title title">Grid 布局</h1>
   <div class="app">
@@ -95,6 +95,32 @@
         </div>
         <div class="grid-cell mb--10">
           <div class="bg">auto/3</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid-nest section">
+      <h3 class="title">嵌套布局</h3>
+      <div class="grid grid--full large-grid--fit" grid-gutters="1">
+        <div class="grid-cell mb--10">
+          <div class="grid bg light" grid-gutters="1">
+            <div class="grid-cell">
+              <div class="bg deep">1/first</div>
+            </div>
+            <div class="grid-cell">
+              <div class="grid bg deep" grid-gutters="1">
+                <div class="grid-cell">
+                  <div class="bg">1/2/first</div>
+                </div>
+                <div class="grid-cell">
+                  <div class="bg">2/2/first</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-cell mb--10">
+          <div class="bg">second</div>
         </div>
       </div>
     </section>
