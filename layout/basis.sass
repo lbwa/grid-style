@@ -23,4 +23,4 @@ $base-col: 8.333333%
     .grid-cell.grid-cell-#{$i}
       flex-grow: 0
       flex-basis: $base-col * $i
-      max-width: $base-col * $i
+      max-width: $base-col * $i // ! 防止内容撑开容器，必须设置
