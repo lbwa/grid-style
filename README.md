@@ -115,8 +115,8 @@ import 'grid-style/layout/index.sass'
   <div class="grid-cell offset-1">
     <!-- offset 8.33333% * 1 -->
   </div>
-  <div class="grid-cell offset-4">
-    <!-- offset 8.33333% * 4 -->
+  <div class="grid-cell offset-5">
+    <!-- offset 8.33333% * 5 -->
   </div>
   <div class="grid-cell offset-6">
     <!-- offset 8.33333% * 6 -->
@@ -127,7 +127,7 @@ import 'grid-style/layout/index.sass'
 </div>
 ```
 
-[demo-offset]:https://jsfiddle.net/h946ot70/33/
+[demo-offset]:https://jsfiddle.net/h946ot70/36/
 
 ## responsive
 
