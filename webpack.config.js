@@ -19,7 +19,7 @@ module.exports = {
 
   output: {
     filename: 'app.js',
-    path: resolve('docs')
+    path: resolve('dist')
   },
 
   module: {

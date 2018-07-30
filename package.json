@@ -3,9 +3,10 @@
   "version": "0.2.0",
   "description": "Grid layout implemented by flex box.",
   "main": "dist/index.css",
-  "style": "dist/index.mini.css",
+  "style": "dist/index.min.css",
   "files": [
     "dist/index.css",
+    "dist/index.min.css",
     "layout"
   ],
   "author": "Bowen <mr_lbw@outlook.com>",
