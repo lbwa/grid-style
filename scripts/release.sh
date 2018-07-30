@@ -22,14 +22,19 @@ select VERSION in patch minor major "Specific Version"
 
       if [[ $REPLY =~ ^[Yy]$ ]]; then
 
-        # bump version
         npm version $VERSION
         NEW_VERSION=$(node -p "require('./package.json').version")
         echo Releasing ${NEW_VERSION} ...
 
-        # npm release
         yarn publish --new-version ${NEW_VERSION}
         echo "✅  Released to npm."
+
+        yarn run changelog
+        git add CHANGELOG.md
+        git commit -m "chore: changelog"
+        git push
+        git push origin refs/tags/v${NEW_VERSION}
+        echo "✅  Released to Github."
       else
         echo Cancelled
       fi
