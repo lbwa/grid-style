@@ -1,9 +1,12 @@
-// 使用 float: left 实现时，需在子元素 ::before :: after 设置 { display: table,
-// content: '' }  来消除子元素与父容器元素之间的空白
+/*
+  备选实现：float: left
+  1. 使用 float: left 实现 grid 布局时，需在子元素 ::before :: after 设置 {
+     display: table;  content: '' }  来消除子元素与父容器元素之间的空白
+  2. disply: flex 与 float: left 冲突（高优先级为 flex），那么同时设置时，在不支持
+     display: flex 的浏览器上只会有 float: left 生效（即备选方案生效）
+ */
 
-// disply: flex 与 float: left 冲突（高优先级为 flex），那么同时设置时，在不支持 display: flex 的浏览器上只会有 float: left 生效（即备选方案生效）
-
-// grid 默认以 12 等分主容器内容宽度，即每一份宽度为 width; 8.3333%
+// grid 默认以 12 等分主容器内容宽度，即每一份宽度为 width: 8.3333%
 
 @import './basis.sass'
 @import './gutters.sass'
