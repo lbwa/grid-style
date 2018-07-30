@@ -26,9 +26,19 @@ yarn add grid-style
 ## Usage
 
 ```js
-// import css file
+// import css file to js
 import 'grid-style'
 
 // a sass alternative to css file
 import 'grid-style/layout/index.sass'
+```
+
+```css
+/* import css file to other css file */
+@import 'grid-style';
+
+/* or */
+
+/* import sass file to other sass file */
+@import 'grid-style/layout/index.sass'
 ```
