@@ -1,3 +1,13 @@
+<a name="0.3.1"></a>
+## [0.3.1](https://github.com/lbwa/grid-style/compare/v0.3.0...v0.3.1) (2018-07-31)
+
+
+### Bug Fixes
+
+* wrong package name in README ([58ac8f8](https://github.com/lbwa/grid-style/commit/58ac8f8))
+
+
+
 <a name="0.3.0"></a>
 # [0.3.0](https://github.com/lbwa/grid-style/compare/v0.2.2...v0.3.0) (2018-07-31)
 
