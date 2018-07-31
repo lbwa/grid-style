@@ -1,5 +1,6 @@
 // alignment per row
-// 设置所有 flex item 元素的对齐方式
+
+// 定义 flex container 中所有 flex item 元素在交叉轴 cross axis 上的对齐方式
 .grid-top
   align-items: flex-start
 
@@ -9,8 +10,27 @@
 .grid-bottom
   align-items: flex-end
 
+// 定义容器中所有 flex item 在主轴 main axis 上的对齐方式
+// 仅在 flex-grow 为 0 的情况下生效，因为 flex-grow 在非 0 的情况下总是会按比例分配容器的剩余空间
+
+.grid-jc-start
+  justify-content: flex-start
+
+.grid-jc-end
+  justify-content: flex-end
+
+.grid-jc-center
+  justify-content: center
+
+.grid-jc-between
+  justify-content: space-between
+
+.grid-jc-around
+  justify-content: space-around
+
 // alignment per cell
-// 设置某个元素的对齐方式（仅对单个 flex item 元素有效）
+
+// 设置单个 flex item 元素在 cross axis 上的对齐方式（仅对单个 flex item 元素有效）
 .grid-cell-top
   align-self: flex-start
 
