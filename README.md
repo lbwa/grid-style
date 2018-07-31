@@ -10,7 +10,7 @@
 
 ```bash
 # npm
-npm i gird-style --save
+npm i grid-style --save
 
 # yarn
 yarn add grid-style
