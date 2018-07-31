@@ -1,8 +1,12 @@
 /*
   备选实现：float: left
   1. 使用 float: left 实现 grid 布局时，需在子元素 ::before :: after 设置 {
-     display: table;  content: '' }  来消除子元素与父容器元素之间的空白
-  2. disply: flex 与 float: left 冲突（高优先级为 flex），那么同时设置时，在不支持
+     display: table;  content: '' }  来消除 inline-block 子元素相互之间以及他们与
+     父容器元素之间的空白
+  2. 注意在使用 float 时，块级  元素中的行内块级子元素之间的空白问题，在使用 flexbox
+     的情况下，这些空白将被忽略，但其他情况将出现空白。
+     https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+  3. disply: flex 与 float: left 冲突（高优先级为 flex），那么同时设置时，在不支持
      display: flex 的浏览器上只会有 float: left 生效（即备选方案生效）
  */
 
