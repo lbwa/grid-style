@@ -51,13 +51,13 @@ import 'grid-style/layout/index.sass'
 
 | selector | target | description |
 | -------- | ------ | ----------- |
-| .gird | container | define box container |
+| .grid | container | define box container |
 | .grid.no-wrap | container | disallow wrap item |
-| .gird.col | container | set flex direction to column |
-| .gird.cr | container | set flex direction to column-reverse |
-| .gird.row | container | set flex direction to row |
-| .gird.rr | container | set flex direction to row-reverse |
-| .gird-cell | item | define default flex grow factor value of a item |
+| .grid.col | container | set flex direction to column |
+| .grid.cr | container | set flex direction to column-reverse |
+| .grid.row | container | set flex direction to row |
+| .grid.rr | container | set flex direction to row-reverse |
+| .grid-cell | item | define default flex grow factor value of a item |
 | .grid-cell-1 ~ .grid-cell-12 | item | define single item width （based on `1/12 container width`） |
 
 ```html
@@ -93,7 +93,7 @@ import 'grid-style/layout/index.sass'
 
 ```html
 <div class="grid grid-bottom">
-   <!-- all child item element will be bottom-aligned excluding gird-cell alignment element -->
+   <!-- all child item element will be bottom-aligned excluding grid-cell alignment element -->
   <div class="grid-cell">
     <!-- content of this area will be bottom-aligned -->
   </div>
