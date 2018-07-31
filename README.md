@@ -78,16 +78,16 @@ import 'grid-style/layout/index.sass'
 | .grid-top | container | define alignment per ***row*** to top-aligned |
 | .grid-center | container | define alignment per ***row*** to vertically-centered |
 | .grid-bottom | container | define alignment per ***row*** to bottom-aligned |
-| .grid-jc-start | container | define alignment per ***item*** to left-aligned |
-| .grid-jc-end | container | define alignment per ***item*** to right-aligned |
-| .grid-jc-center | container | define alignment per ***item*** to horizontally-centered |
-| .grid-jc-between | container | define alignment per ***item*** to space-between-aligned |
-| .grid-jc-around | container | define alignment per ***item*** to space-around-aligned |
+| .grid-jc-start | container | define alignment all ***item*** to left-aligned |
+| .grid-jc-end | container | define alignment all ***item*** to right-aligned |
+| .grid-jc-center | container | define alignment all ***item*** to horizontally-centered |
+| .grid-jc-between | container | define alignment all ***item*** to space-between-aligned |
+| .grid-jc-around | container | define alignment all ***item*** to space-around-aligned |
 | .grid-cell-top | item | define alignment per ***item*** to top-aligned |
 | .grid-cell-center | item | define alignment per ***item*** to vertically-centered |
 | .grid-cell-bottom | item | define alignment per ***item*** to bottom-aligned |
 
-***Notice***: You have to make sure all item total width less than container width if you are using `.grid-jc-` properties. You can use `.grid-cell-` to limit item width.
+***Notice***: You have to make sure all item total width less than container width if you are using `.grid-jc-` properties. You can use `.grid-cell-1 ~ .grid-cell-12` to limit item width.
 
 [Online alignment demo][demo-alignment]
 
