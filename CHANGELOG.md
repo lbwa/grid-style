@@ -1,3 +1,14 @@
+<a name="0.3.0"></a>
+# [0.3.0](https://github.com/lbwa/grid-style/compare/v0.2.2...v0.3.0) (2018-07-31)
+
+
+### Features
+
+* add functionality for horizontal alignment ([4159622](https://github.com/lbwa/grid-style/commit/4159622))
+* new API to define new flex direction ([41bd663](https://github.com/lbwa/grid-style/commit/41bd663))
+
+
+
 <a name="0.2.2"></a>
 ## [0.2.2](https://github.com/lbwa/grid-style/compare/v0.2.1...v0.2.2) (2018-07-30)
 
