@@ -26,7 +26,7 @@ $base-col: 8.333333%
 // single flex item
 @for $i from 1 through 12
   .grid
-    .grid-cell.grid-cell-#{$i}
+    .grid-cell-#{$i}
       flex-grow: 0
       flex-basis: $base-col * $i
       max-width: $base-col * $i // ! 防止内容撑开容器，必须设置
