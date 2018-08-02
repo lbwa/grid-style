@@ -1,3 +1,14 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/lbwa/grid-style/compare/v0.3.3...v1.0.0) (2018-08-02)
+
+
+### Features
+
+* more gutters value ([ef29440](https://github.com/lbwa/grid-style/commit/ef29440))
+* new responsive breakpoints (576px, 768px, 992px, 1200px) ([c3a1376](https://github.com/lbwa/grid-style/commit/c3a1376))
+
+
+
 <a name="0.3.3"></a>
 ## [0.3.3](https://github.com/lbwa/grid-style/compare/v0.3.2...v0.3.3) (2018-08-02)
 
