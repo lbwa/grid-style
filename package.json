@@ -1,6 +1,6 @@
 {
   "name": "grid-style",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Grid layout implemented by flex box.",
   "main": "dist/index.css",
   "style": "dist/index.min.css",
