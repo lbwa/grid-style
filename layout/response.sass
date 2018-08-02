@@ -1,21 +1,25 @@
 // grid 布局中自定义宽度的实现原理，以 flex-basis 在未指定 flex-grow 的情况下来定义宽度
 
+$base-width: 8.333333333%
+
 // responsive modifiers
 // 在媒体查询失效时，将应用以下样式，那么即可达到响应式布局目的
 // 如 grid-full 与本模块中任意媒体查询搭配时，将在媒体查询失效时应用 grid-full 样式
 // 那么 结合容器的 flex-wrap: wrap 将达到每个 flex item 独占一行的效果
 
+/*
+  默认值
+  flex-grow: 0
+  flex-shrink: 1
+  flex-basis: auto
+  flex-basis 优先级高于 flex-grow，但尺寸不会小于 flex-grow (在非 0 的情况下)且不大于父容器
+  */
+
 // all flex item
 .grid-fit > .grid-cell
   flex: 1 // 即 flex: 1 1 auto
-  /*
-    默认值
-    flex-grow: 0
-    flex-shrink: 1
-    flex-basis: auto
-    flex-basis 优先级高于 flex-grow，但尺寸不会小于 flex-grow (在非 0 的情况下)且不大于父容器
-   */
 
+// all item
 .grid-full > .grid-cell
   flex-grow: 0
   flex-basis: 100%
@@ -36,52 +40,12 @@
   flex-basis: 25%
   max-width: 25%
 
-// small to medium screens(all flex item)
-@media (min-width: 576px)
-  .small-grid-fit > .grid-cell
-    flex: 1
+// per item
 
-  .small-grid-full > .grid-cell
-    flex-grow: 0
-    flex-basis: 100%
-    max-width: 100% // 防止子元素内容撑开容器
-
-  .small-grid-2 > .grid-cell
-    flex-grow: 0
-    flex-basis: 50%
-    max-width: 50%
-
-  .small-grid-3 > .grid-cell
-    flex-grow: 0
-    flex-basis: 33.3333%
-    max-width: 33.3333%
-
-  .small-grid-4 > .grid-cell
-    flex-grow: 0
-    flex-basis: 25%
-    max-width: 25%
-
-// large screens(all flex item)
-@media (min-width: 768px)
-  .large-grid-fit > .grid-cell
-    flex: 1
-
-  .large-grid-full > .grid-cell
-    flex-grow: 0
-    flex-basis: 100%
-    max-width: 100%
-
-  .large-grid-2 > .grid-cell
-    flex-grow: 0
-    flex-basis: 50%
-    max-width: 50%
-
-  .large-grid-3 > .grid-cell
-    flex-grow: 0
-    flex-basis: 33.3333%
-    max-width: 33.3333%
-
-  .large-grid-4 > .grid-cell
-    flex-grow: 0
-    flex-basis: 25%
-    max-width: 25%
+@each $screen, $type in (576px, sm), (768px, md), (992px,lg), (1200px, xl)
+  @media (min-width: $screen)
+    @for $i from 1 through 12
+      .grid-#{$type}-#{$i}
+        flex-grow: 0
+        flex-basis: $base-width * $i
+        max-width:  $base-width * $i

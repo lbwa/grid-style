@@ -78,53 +78,49 @@
 
     <section class="responsive section">
       <h3 class="title">响应式布局</h3>
-      <span class="tips">flex 容器配置 grid-full ~ 2, 3, 4 +  large-grid-fit 或者 small-grid-fit</span>
+      <span class="tips">单个 grid 元素配置 grid-(sm | md | xl)-(1-12)</span>
 
-      <div class="grid grid-full large-grid-fit" grid-gutters="1">
-        <div class="grid-cell mb-10">
+      <div class="grid" grid-gutters="1">
+        <div class="grid-cell mb-10 grid-xl-3">
           <div class="bg">auto/2</div>
         </div>
-        <div class="grid-cell mb-10">
+        <div class="grid-cell mb-10 grid-md-9">
           <div class="bg">auto/2</div>
         </div>
       </div>
-      <div class="grid grid-full large-grid-fit" grid-gutters="1">
-        <div class="grid-cell mb-10">
+      <div class="grid" grid-gutters="1">
+        <div class="grid-cell mb-10 grid-sm-12 grid-md-12">
           <div class="bg">auto/3</div>
         </div>
-        <div class="grid-cell mb-10">
+        <div class="grid-cell mb-10 grid-sm-12 grid-md-12">
           <div class="bg">auto/3</div>
         </div>
-        <div class="grid-cell mb-10">
+        <div class="grid-cell mb-10 grid-sm-12 grid-md-12">
           <div class="bg">auto/3</div>
         </div>
       </div>
 
-      <span class="tips">Tips: 当屏幕宽度小于 576 px 时将改变布局</span>
     </section>
 
     <section class="grid-nest section">
       <h3 class="title">嵌套布局</h3>
-      <div class="grid grid-full large-grid-fit" grid-gutters="1">
+      <div class="grid" grid-gutters="1">
         <div class="grid-cell mb-10">
           <div class="grid bg light" grid-gutters="1">
             <div class="grid-cell">
-              <div class="bg deep">1/first</div>
+              <div class="bg deep">1/1</div>
             </div>
             <div class="grid-cell">
-              <div class="grid bg deep no-wrap" grid-gutters="1">
-                <div class="grid-cell">
-                  <div class="bg">1/2/first</div>
+              <div class="grid bg deep" grid-gutters="1">
+                <div class="grid-cell mb-10 grid-sm-6 grid-md-12">
+                  <div class="bg">1/2</div>
                 </div>
-                <div class="grid-cell">
-                  <div class="bg">2/2/first</div>
+                <div class="grid-cell grid-sm-6 grid-md-12">
+                  <div class="bg">2/2</div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="grid-cell mb-10">
-          <div class="bg">second</div>
         </div>
       </div>
     </section>

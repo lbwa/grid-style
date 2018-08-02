@@ -109,7 +109,7 @@ import 'grid-style/layout/index.sass'
 
 | selector | target | description |
 | -------- | ------ | ----------- |
-| .grid[grid-gutters="1"] ~ .grid[grid-gutters="5"] | container | define item gutter （based on `.5em`） |
+| .grid[grid-gutters="1"] ~ .grid[grid-gutters="10"] | container | define item gutter （based on `.5em`） |
 
 ## Offset
 
@@ -142,6 +142,18 @@ import 'grid-style/layout/index.sass'
 
 ***Notice***: This section define properties to ***all*** item （`.grid-cell` * n） from ***one*** container（`.grid` * 1）.
 
+| selector | target | description |
+| -------- | ------ | ----------- |
+| .grid-full | container | define all item (`100%` container width) width from same container |
+| .grid-2 | container | define all item (`50%` container width) width from same container |
+| .grid-3 | container | define all item (`33.3333%` container width) width from same container |
+| .grid-4 | container | define all item (`25%` container width) width from same container |
+| .grid-sm-1 ~ .grid-sm-12 | item | define single item width (`8.3333% ~ 100%` container width) under device width over `576px` |
+| .grid-md-1 ~ .grid-md-12 | item | define single item width (`8.3333% ~ 100%` container width) under device width over `768px` |
+| .grid-lg-1 ~ .grid-lg-12 | item | define single item width (`8.3333% ~ 100%` container width) under device width over `992px` |
+| .grid-xl-1 ~ .grid-xl-12 | item | define single item width (`8.3333% ~ 100%` container width) under device width over `1200px` |
+
+If you are using version `0.3.x` :
 | selector | target | description |
 | -------- | ------ | ----------- |
 | .grid-full | container | define all item (`100%` container width) width from same container |
