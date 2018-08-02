@@ -1,3 +1,13 @@
+<a name="1.0.2"></a>
+## [1.0.2](https://github.com/lbwa/grid-style/compare/v1.0.1...v1.0.2) (2018-08-02)
+
+
+### Bug Fixes
+
+* .grid-cell-#{$i} get lower weight ([0e52b85](https://github.com/lbwa/grid-style/commit/0e52b85))
+
+
+
 <a name="1.0.1"></a>
 ## [1.0.1](https://github.com/lbwa/grid-style/compare/v1.0.0...v1.0.1) (2018-08-02)
 
