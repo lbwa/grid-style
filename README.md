@@ -154,6 +154,7 @@ import 'grid-style/layout/index.sass'
 | .grid-xl-1 ~ .grid-xl-12 | item | define single item width (`8.3333% ~ 100%` container width) under device width over `1200px` |
 
 If you are using version `0.3.x` :
+
 | selector | target | description |
 | -------- | ------ | ----------- |
 | .grid-full | container | define all item (`100%` container width) width from same container |
