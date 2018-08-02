@@ -2,6 +2,7 @@
 
 $base-col: 8.333333%
 
+// container
 .grid
   display: flex
   flex-wrap: wrap // 使得 flex-grow: 0; flex-basis: 100% 生效时 flex item 独占一行
@@ -20,13 +21,12 @@ $base-col: 8.333333%
   &.rr
     flex-direction: row-reverse
 
+// per item
 .grid-cell
   flex: 1
 
-// single flex item
 @for $i from 1 through 12
-  .grid
-    .grid-cell-#{$i}
-      flex-grow: 0
-      flex-basis: $base-col * $i
-      max-width: $base-col * $i // ! 防止内容撑开容器，必须设置
+  .grid-cell-#{$i}
+    flex-grow: 0
+    flex-basis: $base-col * $i
+    max-width: $base-col * $i // ! 防止内容撑开容器，必须设置
