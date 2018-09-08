@@ -1,6 +1,6 @@
 # grid-style [![npm](https://img.shields.io/npm/v/grid-style.svg)](https://www.npmjs.com/package/grid-style) [![Build Status](https://travis-ci.org/lbwa/grid-style.svg?branch=master)](https://travis-ci.org/lbwa/grid-style)
 
-> CSS grid layout which is based on 12 preset columns layout implemented by flex box.
+> CSS grid layout which is based on 12 preset columns layout is implemented by flex box.
 
 👉Browse [online]
 
